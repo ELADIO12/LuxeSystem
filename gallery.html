@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>StayLuxe | Gallery</title>
+	<link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    
+    
+</head>
+<body>
+    <div class="header">
+        <div class="wrap">
+            <div class="header-top">
+                <div class="logo">
+                    <a href="index.html"><img src="images/stay.png" alt="StayLuxe Logo" /></a>
+                </div>
+                <img src="images/luxe.jpg" class="banner-img" alt="Luxury Banner">
+                
+                <div class="contact-info">
+                    <a href="contact.html">
+                        <img src="images/contact-us.jpg" width="200" style="margin-bottom:10px;" alt="Contact Us" />
+                    </a>
+                    <p>Call us: <b>(082) 225-365</b></p>
+                    <p><a href="#">View Map (GPS)</a></p>
+                    <p style="font-size: 11px;">Brought to you by: Holy Cross</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-top-nav">
+            <div class="wrap">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li class="active"><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="wrap">
+            <div class="gallerys">
+			
+                <h3>Our Gallery</h3>
+                
+                <div class="gallery-grids">
+                    <div class="gallery-grid">
+                        <img src="images/slider1.jpg" alt="Deluxe Prime">
+                        <h4>Deluxe Prime</h4>
+                        <p>With king size bed and ocean view.</p>
+                        <div class="gallery-button"><a href="#" onclick="myBooking()">Book Now</a></div>
+                    </div>
+
+                    <div class="gallery-grid">
+                        <img src="images/slider3.jpg" alt="Deluxe Supreme">
+                        <h4>Deluxe Supreme</h4>
+                        <p>Two queen size beds for family comfort.</p>
+                        <div class="gallery-button"><a href="#" onclick="myBooking()">Book Now</a></div>
+                    </div>
+
+                    <div class="gallery-grid">
+                        <img src="images/imperialclub-hero-2x1.jpg" alt="Imperial Club">
+                        <h4>Imperial Club Room</h4>
+                        <p>For those seeking additional luxury.</p>
+                        <div class="gallery-button"><a href="#" onclick="myBooking()">Book Now</a></div>
+                    </div>
+
+                    <div class="gallery-grid">
+                        <img src="images/terraceclubsuite-hero-2x1.jpg" alt="Terrace Suite">
+                        <h4>Terrace Club Suite</h4>
+                        <p>Spacious terraces perfect for al fresco dining.</p>
+                        <div class="gallery-button"><a href="#" onclick="myBooking()">Book Now</a></div>
+                    </div>
+
+                    <div class="gallery-grid">
+                        <img src="images/executiveclubsuite-hero-2x1.jpg" alt="Executive Suite">
+                        <h4>Executive Club Suite</h4>
+                        <p>The perfect balance of comfort and luxury.</p>
+                        <div class="gallery-button"><a href="#" onclick="myBooking()">Book Now</a></div>
+                    </div>
+
+                    <div class="gallery-grid">
+                        <img src="images/regalclubsuite-hero-2x1.jpg" alt="Regal Suite">
+                        <h4>Regal Club Suite</h4>
+                        <p>A lavish sanctuary with room to relax.</p>
+                        <div class="gallery-button"><a href="#" onclick="myBooking()">Book Now</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="boxs">
+        <div class="wrap footer-flex">
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#" onclick="myFeedback()">Leave a Feedback</a></li>
+                    <li><a href="#" onclick="myFeedback()">Reviews and Ratings</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="services.html">Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-img">
+                <img src="images/davao.png" height="120" alt="Davao Location">
+            </div>
+        </div>
+    </div>
+
+    <div class="copy-tight">
+        <p>© 2026 StayLuxe Hotels & Resorts | Davao City</p>
+    </div>
+
+    <script>
+        function myBooking() {
+            var number = prompt("Please enter your mobile number", "09XXXXXXXXX");
+            if (number) {
+                var confirmBooking = confirm("The price for this room is ₱1,200 per night. Proceed?");
+                if (confirmBooking) {
+                    alert("Reservation successful! Our team will contact you at " + number);
+                }
+            }
+        }
+
+        function myFeedback() {
+            var feedback = prompt("How was your experience with StayLuxe?");
+            if (feedback) {
+                alert("Thank you for your feedback! It helps us stay excellent.");
+            }
+        }
+    </script>
+</body>
+</html>

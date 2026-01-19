@@ -1,0 +1,367 @@
+:root {
+    --primary-blue: #0c243d;
+    --gold: #c5a059;
+    --light-gray: #f4f4f4;
+    --white: #ffffff;
+    --text-dark: #333333;
+    --transition: all 0.3s ease;
+}
+
+/* --- General Reset --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--white);
+}
+
+.wrap {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.clear { clear: both; }
+
+/* --- Header Section --- */
+.header-top {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    height: 80px;
+    width: auto;
+}
+
+/* Styling for the center banner image */
+.header-top > img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.contact-info {
+    text-align: right;
+}
+
+.contact-info img {
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.contact-info p {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.contact-info a {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* --- Navigation (FULL WIDTH & BIGGER FONT) --- */
+.header-top-nav {
+    background-color: var(--primary-blue);
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-top-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.header-top-nav ul li {
+    margin: 0;
+}
+
+.header-top-nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    display: block;
+    padding: 25px 40px;
+    transition: var(--transition);
+}
+
+.header-top-nav ul li.active a,
+.header-top-nav ul li a:hover {
+    background-color: #143150;
+    color: var(--gold);
+}
+
+/* --- Centered About Section Content --- */
+.about-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.about-section h3 {
+    margin-bottom: 40px;
+}
+
+.about-grids {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* --- Organized & Arranged Gallery --- */
+.gallery-grids {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+    justify-content: center;
+}
+
+.gallery-grid {
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: var(--transition);
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 250px; /* Fixed height for organized look */
+    object-fit: cover; /* Prevents stretching */
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.gallery-grid:hover {
+    transform: translateY(-5px);
+}
+
+.gallery-grid:hover img {
+    transform: scale(1.05);
+}
+
+/* --- Content & Services (STRICTLY UNCHANGED) --- */
+.content {
+    padding: 50px 0;
+}
+
+.services {
+    display: flex;
+    gap: 40px;
+}
+
+.service-content {
+    flex: 2;
+}
+
+.services-sidebar {
+    flex: 1;
+    background: var(--light-gray);
+    padding: 25px;
+    border-radius: 8px;
+    height: fit-content;
+}
+
+h3 {
+    font-size: 2rem;
+    color: var(--primary-blue);
+    margin-bottom: 30px;
+    border-bottom: 2px solid var(--gold);
+    display: inline-block;
+}
+
+/* Service List Items */
+.service-content ul {
+    list-style: none;
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 15px;
+    border-left: 5px solid var(--gold);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: var(--transition);
+}
+
+.service-content ul:hover {
+    transform: translateX(10px);
+}
+
+.service-content li span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--gold);
+    float: left;
+    margin-right: 15px;
+}
+
+.service-content p a {
+    font-weight: bold;
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+}
+
+/* Sidebar Links */
+.services-sidebar ul {
+    list-style: none;
+}
+
+.services-sidebar ul li {
+    margin-bottom: 12px;
+}
+
+.services-sidebar ul li a {
+    text-decoration: none;
+    color: var(--text-dark);
+    display: block;
+    padding: 10px;
+    background: white;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.services-sidebar ul li a:hover {
+    background: var(--gold);
+    color: white;
+}
+
+/* --- Boxs / Footer Info --- */
+.boxs {
+    background: var(--primary-blue);
+    color: white;
+    padding: 40px 0;
+    margin-top: 50px;
+}
+
+.box.center-box ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.box.center-box ul li a {
+    color: var(--gold);
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+#top123 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#top123 img {
+    border: 3px solid var(--gold);
+    border-radius: 8px;
+}
+
+/* --- Copyright --- */
+.copy-tight {
+    text-align: center;
+    padding: 20px 0;
+    background: #081a2d;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .services {
+        flex-direction: column;
+    }
+    .header-top {
+        flex-direction: column;
+        text-align: center;
+    }
+    .contact-info {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .header-top-nav ul li a {
+        padding: 15px 10px;
+        font-size: 1rem;
+        letter-spacing: 1px;
+    }
+    .gallery-grids {
+        grid-template-columns: 1fr;
+    }
+}
+/* --- Booking Status Page Styles --- */
+
+.status-message {
+    text-align: center;
+    padding: 100px 0;
+    background: var(--light-gray);
+    border-radius: 8px;
+    margin-top: 50px;
+    border: 1px solid #ddd;
+}
+
+.status-message h1 {
+    font-size: 3rem;
+    color: var(--primary-blue);
+    margin-bottom: 10px;
+    border-bottom: none; /* Removing the bottom border from general H3 style */
+}
+
+.status-message h3 {
+    color: var(--gold);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.status-message p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.status-message .redirect {
+    color: #888;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+/* Button style for the redirect link */
+.status-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+    background-color: var(--primary-blue);
+    color: var(--white) !important;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.status-btn:hover {
+    background-color: var(--gold);
+}
+
+.error {
+    color: #d9534f !important; /* Red for errors */
+}
